@@ -3,4 +3,7 @@
 
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
+    <string name="save_dialog_title">Save file to...</string>
+    <string name="save_dialog_positive">Save</string>
+    <string name="download_photo_title">File Downloading to</string>
 </resources>

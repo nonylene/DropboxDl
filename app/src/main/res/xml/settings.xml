@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <CheckBoxPreference
+        android:key="skip_dialog"
+        android:defaultValue="false"
+        android:title="Skip dialog"
+        android:summary="Download directly."/>
+
+    <EditTextPreference
+        android:key="download_dir"
+        android:defaultValue="Download"
+        android:title="Download directory"
+        android:summary="Tap to set"/>
+</PreferenceScreen>
