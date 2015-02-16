@@ -1,4 +1,4 @@
-package net.nonylene.dropboxdl;
+package net.nonylene.dlfordropbox;
 
 import android.app.Activity;
 import android.app.DownloadManager;
@@ -68,7 +68,7 @@ public class MainActivity extends Activity implements SaveDialogFragment.SaveDia
         DownloadManager.Request request = new DownloadManager.Request(uri);
         request.setDestinationUri(Uri.fromFile(path));
         request.setTitle(filename);
-        request.setDescription("DropboxDl");
+        request.setDescription("Downloader for Dropbox");
         request.setAllowedNetworkTypes(DownloadManager.Request.NETWORK_MOBILE | DownloadManager.Request.NETWORK_WIFI);
         // notify
         request.setNotificationVisibility(DownloadManager.Request.VISIBILITY_VISIBLE_NOTIFY_COMPLETED);

@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">DropboxDl</string>
+    <string name="app_name" translatable="false">Downloader for Dropbox</string>
 
     <string name="save_dialog_title">Save file to...</string>
     <string name="save_dialog_positive">Save</string>

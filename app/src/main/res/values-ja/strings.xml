@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">DropboxDl</string>
     <string name="download_file_title">ファイルをダウンロード中: </string>
     <string name="save_dialog_positive">保存</string>
     <string name="save_dialog_title">ファイルの保存先</string>
