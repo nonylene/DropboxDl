@@ -73,7 +73,7 @@ public class MainActivity extends Activity implements SaveDialogFragment.SaveDia
         // notify
         request.setNotificationVisibility(DownloadManager.Request.VISIBILITY_VISIBLE_NOTIFY_COMPLETED);
         downloadManager.enqueue(request);
-        Toast.makeText(this, getString(R.string.download_photo_title) + path.toString(), Toast.LENGTH_LONG).show();
+        Toast.makeText(this, getString(R.string.download_file_title) + path.toString(), Toast.LENGTH_LONG).show();
         finish();
     }
 

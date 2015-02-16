@@ -4,12 +4,12 @@
     <CheckBoxPreference
         android:key="skip_dialog"
         android:defaultValue="false"
-        android:title="Skip dialog"
-        android:summary="Download directly."/>
+        android:title="@string/skip_title"
+        android:summary="@string/skip_summary"/>
 
     <EditTextPreference
         android:key="download_dir"
         android:defaultValue="Download"
-        android:title="Download directory"
-        android:summary="Tap to set"/>
+        android:title="@string/dir_title"
+        android:summary="@string/dir_summary"/>
 </PreferenceScreen>
