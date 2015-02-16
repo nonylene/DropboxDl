@@ -60,4 +60,10 @@ public class SaveDialogFragment extends DialogFragment {
                 });
         return builder.create();
     }
+
+    @Override
+    public void onCancel(DialogInterface dialog) {
+        super.onCancel(dialog);
+        listener.onCancel();
+    }
 }
