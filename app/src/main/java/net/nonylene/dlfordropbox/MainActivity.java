@@ -13,6 +13,8 @@ import android.util.Log;
 import android.widget.Toast;
 
 import java.io.File;
+import java.io.UnsupportedEncodingException;
+import java.net.URLDecoder;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -34,6 +36,11 @@ public class MainActivity extends Activity implements SaveDialogFragment.SaveDia
                 Log.v("match", "success");
             }
             String name = matcher.group(2);
+            try {
+                name = URLDecoder.decode(name, "UTF-8");
+            } catch (UnsupportedEncodingException e) {
+                Log.e("EncodingException", e.toString());
+            }
             file_url = "https://dl.dropboxusercontent.com/s/" + matcher.group(1) + "/" + name;
             Bundle bundle = new Bundle();
             bundle.putString("filename", name);
