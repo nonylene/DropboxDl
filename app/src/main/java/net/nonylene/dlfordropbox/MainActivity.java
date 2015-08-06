@@ -36,14 +36,15 @@ public class MainActivity extends Activity implements SaveDialogFragment.SaveDia
                 Log.v("match", "success");
             }
             String name = matcher.group(2);
+            String decodedName = null;
             try {
-                name = URLDecoder.decode(name, "UTF-8");
+                decodedName = URLDecoder.decode(name, "UTF-8");
             } catch (UnsupportedEncodingException e) {
                 Log.e("EncodingException", e.toString());
             }
             file_url = "https://dl.dropboxusercontent.com/s/" + matcher.group(1) + "/" + name;
             Bundle bundle = new Bundle();
-            bundle.putString("filename", name);
+            bundle.putString("filename", decodedName);
 
             SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(this);
             // set download directory
@@ -55,7 +56,7 @@ public class MainActivity extends Activity implements SaveDialogFragment.SaveDia
             bundle.putString("dir", dir.toString());
 
             if (preferences.getBoolean("skip_dialog", false)) {
-                save(name);
+                save(decodedName);
             } else {
                 SaveDialogFragment dialogFragment = new SaveDialogFragment();
                 dialogFragment.setArguments(bundle);
